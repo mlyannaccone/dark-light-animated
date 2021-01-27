@@ -1,0 +1,22 @@
+.mode-icon {
+    margin: 50px; 
+    width: 200px;
+    height: 200px;
+    display: 'flex'
+}
+
+@media screen and (max-width: 1024px){
+    .mode-icon {
+        margin: 20px;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .mode-icon {
+        margin: 10px;
+        width: 50px;
+        height: 50px;
+    }
+}
