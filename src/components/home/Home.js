@@ -9,6 +9,10 @@ function Home({darkMode, setDarkMode}) {
         backgroundColor: darkMode ? "#4a413c" : "#f7efd7"
     })
 
+    function toggleMode() {
+        setDarkMode(prev => !prev)
+    }
+
     const transitionText = useTransition(darkMode, null, {
         from: { opacity: 0, position: 'absolute'},
         enter: { opacity: 1, position: 'absolute'},
@@ -25,7 +29,7 @@ function Home({darkMode, setDarkMode}) {
 
     return (
         <animated.div style={{...switchMode, height: "100%"}} className="home-div">
-            <div className="mode-div">
+            <div className="mode-div" onClick={toggleMode}>
                 {textarea}
             </div>
             <DarkLightIcon darkMode={darkMode} setDarkMode={setDarkMode}/>
